@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import { publicPath } from "@/lib/base-path"
 import { ArrowRight } from "lucide-react"
 
 const collections = [
@@ -41,7 +42,7 @@ export function CollectionSection() {
             <div key={collection.name} className="group cursor-pointer">
               <div className="relative aspect-[3/4] overflow-hidden bg-muted">
                 <Image
-                  src={collection.image}
+                  src={publicPath(collection.image)}
                   alt={collection.name}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"

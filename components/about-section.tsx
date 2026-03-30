@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { publicPath } from "@/lib/base-path"
 
 const stats = [
   { value: "10+", label: "Years Experience" },
@@ -14,7 +15,7 @@ export function AboutSection() {
           <div className="relative">
             <div className="aspect-[4/5] relative overflow-hidden">
               <Image
-                src="/images/about-fashion.jpg"
+                src={publicPath("/images/about-fashion.jpg")}
                 alt="Fashion store interior"
                 fill
                 className="object-cover"

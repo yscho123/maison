@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { publicPath } from "@/lib/base-path"
 
 const reviews = [
   {
@@ -48,7 +49,7 @@ export function ReviewsSection() {
                 </p>
                 <div className="mt-8 flex items-center gap-4">
                   <Avatar>
-                    <AvatarImage src={review.avatar} alt={review.name} />
+                    <AvatarImage src={publicPath(review.avatar)} alt={review.name} />
                     <AvatarFallback className="bg-muted text-muted-foreground">{review.initials}</AvatarFallback>
                   </Avatar>
                   <div>
